@@ -59,7 +59,7 @@ def AllDecrypt(flist, key):
                 decrypt_file(key, flist[i])
                 os.remove(flist[i])
 
-def Start():
+def Path():
     flist = []
     path = input("Input >> ")
     flist = list.file_list(path)
