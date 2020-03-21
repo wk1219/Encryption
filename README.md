@@ -6,7 +6,7 @@ This project uses AES encryption.
 ## File encryption 
  ```Extension : .ark```
 
-## Use
+## Function
 * KeyGenerator() : Input your key (16 characters)
 
 * Path() : Input path you want to encrypt 
