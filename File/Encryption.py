@@ -1,4 +1,4 @@
-from Collection import list
+import list
 import os, random, struct
 from Crypto.Cipher import AES
 
@@ -69,3 +69,10 @@ def KeyGenerator():
     key = input("Input Key (16 characters) >> ")
     en_key = key.encode('utf-8')
     return en_key
+
+
+files = Path()
+key = KeyGenerator()
+print(type(key))
+# AllEncrypt(files, key)
+# AllDecrypt(files, key)
